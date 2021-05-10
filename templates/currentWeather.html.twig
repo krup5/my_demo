@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Forecast Weather using OpenWeatherMap with PHP</title>
+
+    <link href="{{ asset('style.css') }}" rel="stylesheet"/>
+
+</head>
+<body>
+
+{{ include('base.html.twig') }}
+
+<div class="report-container">
+    <h2>{{ nameInView }} Weather Status</h2>
+    <div class="time">
+        <div>{{ timeInView }}</div>
+        <div>{{ dateInView }}</div>
+        <div>{{ descriptionInView }}</div>
+    </div>
+    <div class="weather-forecast">
+        <img src="http://openweathermap.org/img/w/{{ iconInView }}.png" class="weather-icon" />
+        <span class="max-temperature">Temp max: {{ temp_maxInView }}&deg;C</span>
+        <span class="min-temperature">Temp min: {{ temp_minInView }}&deg;C</span>
+    </div>
+    <div class="time">
+        <div>Humidity: {{ humidityInView }} %</div>
+        <div>Wind: {{ speedInView }} km/h</div>
+    </div>
+</div>
+
+
+</body>
+</html>

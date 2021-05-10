@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h2>List of all search history</h2>
+    <table class="table table-stripped">
+        <thead>
+        <tr>
+            <td>ID</td>
+            <td>City</td>
+            <td>Temperature</td>
+            <td>Date</td>
+        </tr>
+        </thead>
+        <tbody>
+        {% for history in historyWeatherData  %}
+            <tr>
+                <td>{{ history.id }}</td>
+                <td>{{ history.city }}</td>
+                <td>{{ history.temperature }}</td>
+                <td>{{ history.date }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
